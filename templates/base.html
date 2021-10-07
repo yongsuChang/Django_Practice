@@ -5,7 +5,13 @@
     <title>FastCampus Django</title>
 </head>
 <body>
-    {{welcome_msg}}
-    {{hello}}
+    {{ user}} <br>
+    {% for i in params %}
+    {{i}}<br>
+    {% endfor %}
+
+    {% if user.username == "admin" %}
+    {{user.email}}<br>
+    {% endif %}
 </body>
 </html>
