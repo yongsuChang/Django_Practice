@@ -12,6 +12,7 @@ class PayPlan(models.Model):
 
 # AbstractUser사용하는 방법
 class Users(AbstractUser):
+    full_name = models.CharField(max_length=100, null=True)
     pay_plan = models.ForeignKey(PayPlan, on_delete=models.DO_NOTHING, default=1)
 
 # UserDetail사용하는 방법
